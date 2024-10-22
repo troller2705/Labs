@@ -556,7 +556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_42
+      name: MarioJump
       rect:
         serializedVersion: 2
         x: 395
@@ -6281,6 +6281,7 @@ TextureImporter:
       MarioDeath1: -1657113082
       MarioDeath2: 2097142578
       MarioIdle: 2119909162
+      MarioJump: 881031757
       MarioRun1: -410591566
       MarioRun2: 1410697782
       MarioRun3: -2020796421
@@ -6639,7 +6640,6 @@ TextureImporter:
       mario_full_417: -1509681408
       mario_full_418: -129325253
       mario_full_419: 1278664684
-      mario_full_42: 881031757
       mario_full_420: -238076430
       mario_full_421: 517617713
       mario_full_422: 1065486945

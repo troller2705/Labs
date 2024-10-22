@@ -2,45 +2,73 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
+    //Component Refs
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+    Animator anim;
+
+    //Movement Vars
     [Range(5f, 10f)]
     public float speed = 5.5f;
+    [Range(3f, 10f)]
+    public float jump = 8.0f;
 
-    public float jump = 200f;
-
+    //Ground Check Vars
+    [Range(0.01f, 0.1f)]
+    public float groundCheckRadius = 0.02f;
     private bool isGrounded = true; // To check if the player is on the ground
-
-    Rigidbody2D rb;
+    public LayerMask isGroundLayer;
+    public Transform groundCheck;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+
+        //Ground Check Init
+        GameObject newGameObject = new GameObject();
+        newGameObject.transform.SetParent(transform);
+        newGameObject.transform.localPosition = Vector3.zero;
+        newGameObject.name = "GroundCheck";
+        groundCheck = newGameObject.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if (rb.velocity.y <= 0 && !isGrounded)
+        //{
+        //    isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
+        //}
+        CheckIsGrounded();
+
         float hInput = Input.GetAxis("Horizontal");
-        float vInput = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector2 (hInput * speed, rb.velocity.y);
 
-        if (vInput != 0 && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, vInput * jump);
-            isGrounded = false;
+            rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
         }
+
+        //Sprite Flipping
+        if (hInput != 0) sr.flipX = (hInput < 0); 
+
+        anim.SetFloat("speed", Mathf.Abs(hInput));
+        anim.SetBool("isGrounded", isGrounded);
     }
 
-    // Check if player is grounded
-    private void OnCollisionEnter(Collision collision)
+    void CheckIsGrounded()
     {
-        if (collision.gameObject.tag == "Ground")  // Ensure your ground objects are tagged "Ground"
+        if (!isGrounded)
         {
-            isGrounded = true;
+            if (rb.velocity.y <= 0) isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
         }
+        else isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
     }
 }
