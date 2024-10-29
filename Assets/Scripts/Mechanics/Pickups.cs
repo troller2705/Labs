@@ -8,7 +8,6 @@ public class Pickups : MonoBehaviour
     // Triggered when another collider enters this trigger
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("");
         // Check if the colliding object is the player
         if (other.CompareTag("Player"))
         {
