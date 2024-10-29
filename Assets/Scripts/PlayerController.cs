@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
+[RequireComponent(typeof(GroundCheck))]
 public class PlayerController : MonoBehaviour
 {
     //Component Refs
     Rigidbody2D rb;
     SpriteRenderer sr;
     Animator anim;
+    GroundCheck gc;
 
     //Movement Vars
     [Range(5f, 10f)]
@@ -17,11 +19,7 @@ public class PlayerController : MonoBehaviour
     public float jump = 8.0f;
 
     //Ground Check Vars
-    [Range(0.01f, 0.1f)]
-    public float groundCheckRadius = 0.02f;
-    public bool isGrounded = true; // To check if the player is on the ground
-    public LayerMask isGroundLayer;
-    public Transform groundCheck;
+    public bool isGrounded = false; // To check if the player is on the ground
 
     // Start is called before the first frame update
     void Start()
@@ -29,35 +27,33 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
-        //Ground Check Init
-        GameObject newGameObject = new GameObject();
-        newGameObject.transform.SetParent(transform);
-        newGameObject.transform.localPosition = Vector3.zero;
-        newGameObject.name = "GroundCheck";
-        groundCheck = newGameObject.transform;
+        gc = GetComponent<GroundCheck>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (rb.velocity.y <= 0 && !isGrounded)
-        //{
-        //    isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
-        //}
+        AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
         CheckIsGrounded();
 
         float hInput = Input.GetAxis("Horizontal");
 
         rb.velocity = new Vector2 (hInput * speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (curPlayingClips.Length > 0)
         {
-            rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+            if (!(curPlayingClips[0].clip.name == "Fire"))
+            {
+                rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
+            }
         }
 
         //Sprite Flipping
-        if (hInput != 0) sr.flipX = (hInput < 0); 
+        if (hInput != 0) sr.flipX = (hInput < 0);
+
+        //inputs for firing and jump attack
+        if (Input.GetButtonDown("Fire1") && isGrounded) anim.SetTrigger("fire");
+        if (Input.GetButtonDown("Fire1") && !isGrounded) anim.SetTrigger("jumpAttack");
 
         anim.SetFloat("speed", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
@@ -67,8 +63,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGrounded)
         {
-            if (rb.velocity.y <= 0) isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
+            if (rb.velocity.y <= 0) isGrounded = gc.IsGrounded();
         }
-        else isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
+        else isGrounded = gc.IsGrounded();
     }
 }

@@ -1031,12 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 10
-  groundCheckRadius: 0.02
   isGrounded: 1
-  isGroundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheck: {fileID: 0}
 --- !u!50 &477628261
 Rigidbody2D:
   serializedVersion: 4
@@ -1143,7 +1138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 5
-  jumpFallForce: 20
+  jumpFallForce: 4.5
+  jumpCancelled: 0
 --- !u!114 &477628265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,7 +1156,7 @@ MonoBehaviour:
   groundCheckRadius: 0.02
   groundCheckLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!114 &477628266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,9 +1169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e091d780c7dcd443b39b362414f0997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialShotVelocity: {x: 0, y: 0}
-  spawnR: {fileID: 0}
-  spawnL: {fileID: 0}
+  initialShotVelocity: {x: 5, y: 5}
+  spawnR: {fileID: 264787499}
+  spawnL: {fileID: 1693762172}
   ProjectilePrefab: {fileID: 1363547923826929056, guid: bfee2f0bed7664441906409684fdcf2c, type: 3}
 --- !u!1 &488438901
 GameObject:
@@ -16002,6 +15998,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1668467331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1668467332}
+  m_Layer: 0
+  m_Name: -----PICKUPS-----
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1668467332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668467331}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5042324, y: -3.0495112, z: -8.341933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693762171
 GameObject:
   m_ObjectHideFlags: 0
@@ -16568,3 +16595,4 @@ SceneRoots:
   - {fileID: 1652370568}
   - {fileID: 370552070}
   - {fileID: 144810908}
+  - {fileID: 1668467332}
