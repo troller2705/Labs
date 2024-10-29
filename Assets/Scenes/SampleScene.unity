@@ -906,6 +906,8 @@ GameObject:
   - component: {fileID: 477628261}
   - component: {fileID: 477628260}
   - component: {fileID: 477628263}
+  - component: {fileID: 477628265}
+  - component: {fileID: 477628264}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -996,6 +998,7 @@ MonoBehaviour:
   speed: 5
   jump: 10
   groundCheckRadius: 0.02
+  isGrounded: 1
   isGroundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1093,6 +1096,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &477628264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477628257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5032532a025bfe64cb815ebb2c4bdc25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+  jumpFallForce: 20
+--- !u!114 &477628265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477628257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4685036bb31bed3479a2d8918d99cfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0.02
+  groundCheckLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &488438901
 GameObject:
   m_ObjectHideFlags: 0

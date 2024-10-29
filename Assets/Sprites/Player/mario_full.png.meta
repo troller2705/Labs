@@ -1585,7 +1585,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_142
+      name: MarioAirAttack1
       rect:
         serializedVersion: 2
         x: 333
@@ -1606,7 +1606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_143
+      name: MarioAirAttack2
       rect:
         serializedVersion: 2
         x: 363
@@ -1627,7 +1627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_144
+      name: MarioAirAttack3
       rect:
         serializedVersion: 2
         x: 393
@@ -1648,7 +1648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_145
+      name: MarioAirAttack4
       rect:
         serializedVersion: 2
         x: 424
@@ -2383,10 +2383,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_219
+      name: MarioFire1
       rect:
         serializedVersion: 2
-        x: 336
+        x: 335
         y: 1017
         width: 14
         height: 27
@@ -2404,7 +2404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_220
+      name: MarioFire2
       rect:
         serializedVersion: 2
         x: 365
@@ -2425,7 +2425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_221
+      name: MarioFire3
       rect:
         serializedVersion: 2
         x: 394
@@ -2446,7 +2446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_222
+      name: MarioFire4
       rect:
         serializedVersion: 2
         x: 424
@@ -6278,8 +6278,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      MarioAirAttack1: 1818002836
+      MarioAirAttack2: -2035120687
+      MarioAirAttack3: -863336435
+      MarioAirAttack4: 827833366
       MarioDeath1: -1657113082
       MarioDeath2: 2097142578
+      MarioFire1: 1611712117
+      MarioFire2: 1075058506
+      MarioFire3: 2109939408
+      MarioFire4: 1080204728
       MarioIdle: 2119909162
       MarioJump: 881031757
       MarioRun1: -410591566
@@ -6332,10 +6340,6 @@ TextureImporter:
       mario_full_14: -1371625120
       mario_full_140: 346285515
       mario_full_141: -846210844
-      mario_full_142: 1818002836
-      mario_full_143: -2035120687
-      mario_full_144: -863336435
-      mario_full_145: 827833366
       mario_full_146: -251530211
       mario_full_147: 2094362987
       mario_full_148: -1297427978
@@ -6417,11 +6421,7 @@ TextureImporter:
       mario_full_216: 522550313
       mario_full_217: -305043526
       mario_full_218: 71109921
-      mario_full_219: 1611712117
       mario_full_22: 590540548
-      mario_full_220: 1075058506
-      mario_full_221: 2109939408
-      mario_full_222: 1080204728
       mario_full_223: 1549184925
       mario_full_224: 1292498227
       mario_full_225: -1456042383

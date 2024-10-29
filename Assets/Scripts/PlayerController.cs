@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     //Ground Check Vars
     [Range(0.01f, 0.1f)]
     public float groundCheckRadius = 0.02f;
-    private bool isGrounded = true; // To check if the player is on the ground
+    public bool isGrounded = true; // To check if the player is on the ground
     public LayerMask isGroundLayer;
     public Transform groundCheck;
 
