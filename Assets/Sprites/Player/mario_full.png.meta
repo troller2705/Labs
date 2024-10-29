@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MarioDeath1
+      name: Mario_Small_Death
       rect:
         serializedVersion: 2
         x: 216
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioIdle
+      name: Mario_Small_Idle
       rect:
         serializedVersion: 2
         x: 247
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun1
+      name: Mario_Small_Run1
       rect:
         serializedVersion: 2
         x: 275
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun2
+      name: Mario_Small_Run2
       rect:
         serializedVersion: 2
         x: 306
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioRun3
+      name: Mario_Small_Run3
       rect:
         serializedVersion: 2
         x: 335
@@ -556,7 +556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioJump
+      name: Mario_Small_Jump
       rect:
         serializedVersion: 2
         x: 395
@@ -598,7 +598,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioDeath2
+      name: Mario_Small_Death2
       rect:
         serializedVersion: 2
         x: 215
@@ -766,28 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_66
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 1417
-        width: 16
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a31c5e6f46922b45bf3ffe82a1a0e89
-      internalID: -1396547780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_67
+      name: Mario_Big_Idle
       rect:
         serializedVersion: 2
         x: 246
@@ -808,7 +787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_68
+      name: Mario_Big_Run1
       rect:
         serializedVersion: 2
         x: 275
@@ -829,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_69
+      name: Mario_Big_Run2
       rect:
         serializedVersion: 2
         x: 305
@@ -850,7 +829,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_70
+      name: Mario_Big_Run3
       rect:
         serializedVersion: 2
         x: 334
@@ -871,7 +850,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_71
+      name: Mario_Big_Run4
       rect:
         serializedVersion: 2
         x: 362
@@ -1207,7 +1186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioCrouch
+      name: Mario_Big_Crouch
       rect:
         serializedVersion: 2
         x: 426
@@ -1370,27 +1349,6 @@ TextureImporter:
       bones: []
       spriteID: 18139dc9b87319c4596b3e01a3b3d6a5
       internalID: -1740387547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_125
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 1260
-        width: 18
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbe54d2a585580442896a891293ca1a9
-      internalID: -547400956
       vertices: []
       indices: 
       edges: []
@@ -1585,7 +1543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioAirAttack1
+      name: Mario_Big_AirAttack1
       rect:
         serializedVersion: 2
         x: 333
@@ -1669,28 +1627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_153
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 1177
-        width: 16
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5becb0e4df406ef45a5e6dbea4f00d50
-      internalID: -1532220689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_154
+      name: Mario_Fire_Idle
       rect:
         serializedVersion: 2
         x: 246
@@ -1711,7 +1648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_155
+      name: Mario_Fire_Run1
       rect:
         serializedVersion: 2
         x: 275
@@ -1732,7 +1669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_156
+      name: Mario_Fire_Run2
       rect:
         serializedVersion: 2
         x: 305
@@ -1753,7 +1690,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_157
+      name: Mario_Fire_Run3
       rect:
         serializedVersion: 2
         x: 334
@@ -1774,7 +1711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_158
+      name: Mario_Fire_Run4
       rect:
         serializedVersion: 2
         x: 362
@@ -2110,7 +2047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_190
+      name: Mario_Fire_Crouch
       rect:
         serializedVersion: 2
         x: 426
@@ -2278,69 +2215,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_214
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 1020
-        width: 18
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ae2c55873167f84c9ebf3cb43282d01
-      internalID: 681634161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_215
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 1036
-        width: 8
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3b52d66736448d4e90e63a2aad8add7
-      internalID: 1072850434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_216
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 1036
-        width: 8
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a5a6badadb502d4f81e6f900b657ad4
-      internalID: 522550313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: mario_full_217
       rect:
         serializedVersion: 2
@@ -2383,7 +2257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioFire1
+      name: Mario_Fire_Fire1
       rect:
         serializedVersion: 2
         x: 335
@@ -2404,7 +2278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioFire2
+      name: Mario_Fire_Fire2
       rect:
         serializedVersion: 2
         x: 365
@@ -2425,7 +2299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioFire3
+      name: Mario_Fire_Fire3
       rect:
         serializedVersion: 2
         x: 394
@@ -2446,7 +2320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioFire4
+      name: Mario_Fire_Fire4
       rect:
         serializedVersion: 2
         x: 424
@@ -2462,48 +2336,6 @@ TextureImporter:
       bones: []
       spriteID: 4b94c169978be2b459ca01d940f199ac
       internalID: 1080204728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_225
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 1016
-        width: 8
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e3c2aab50097c84689f15e215656d65
-      internalID: -1456042383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_226
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 1016
-        width: 8
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79bdca03ca3850443bc1c414910fe702
-      internalID: 1970936529
       vertices: []
       indices: 
       edges: []
@@ -2651,27 +2483,6 @@ TextureImporter:
       bones: []
       spriteID: cd8342b97a2cfa546b1ed44bd1a7c597
       internalID: 1359465848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_248
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 936
-        width: 16
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59f9e12945cf3524cae43fd5e320cfa5
-      internalID: -403270281
       vertices: []
       indices: 
       edges: []
@@ -3265,27 +3076,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_308
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 780
-        width: 18
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae500e3bb24a7164d823e269ed538cee
-      internalID: -447722746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: mario_full_309
       rect:
         serializedVersion: 2
@@ -3659,27 +3449,6 @@ TextureImporter:
       bones: []
       spriteID: f0ba997d9aa08a8478f38bfa9cb1f5a9
       internalID: 1735023208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_345
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 659
-        width: 16
-        height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53502e3764b7d1645b220ec6653939ea
-      internalID: 706054512
       vertices: []
       indices: 
       edges: []
@@ -4105,27 +3874,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_388
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 538
-        width: 16
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4cb2555b32c7ae4096529d58d22ec42
-      internalID: -1743269718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: mario_full_389
       rect:
         serializedVersion: 2
@@ -4310,27 +4058,6 @@ TextureImporter:
       bones: []
       spriteID: 2fcd09c004811ce4c9c067a16ab12224
       internalID: 990925600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_407
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 486
-        width: 16
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 752758f4b51317a4a8e60cfed2baff38
-      internalID: 1199283999
       vertices: []
       indices: 
       edges: []
@@ -4903,27 +4630,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_464
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 330
-        width: 18
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c280f9e542a4446aa958f9617d4117
-      internalID: -1172392367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: mario_full_465
       rect:
         serializedVersion: 2
@@ -5192,27 +4898,6 @@ TextureImporter:
       bones: []
       spriteID: 3276d475025b7794f9666e133b57ea3a
       internalID: -1558520473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mario_full_492
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 246
-        width: 16
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fb45a9771c072e4a98614b9fd60d17e
-      internalID: -311334888
       vertices: []
       indices: 
       edges: []
@@ -5806,27 +5491,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_552
-      rect:
-        serializedVersion: 2
-        x: 213
-        y: 90
-        width: 20
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8307daebeadbb714c9830f8666c06cf9
-      internalID: 1519864988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: mario_full_553
       rect:
         serializedVersion: 2
@@ -6281,20 +5945,32 @@ TextureImporter:
       MarioAir1: -2035120687
       MarioAir2: -863336435
       MarioAir3: 827833366
-      MarioAirAttack1: 1818002836
-      MarioCrouch: 2070492964
-      MarioDeath1: -1657113082
-      MarioDeath2: 2097142578
-      MarioFire1: 1611712117
-      MarioFire2: 1075058506
-      MarioFire3: 2109939408
-      MarioFire4: 1080204728
-      MarioIdle: 2119909162
-      MarioJump: 881031757
-      MarioRun1: -410591566
-      MarioRun2: 1410697782
-      MarioRun3: -2020796421
-      mario_full_0: 1838917275
+      Mario_Big_AirAttack1: 1818002836
+      Mario_Big_Crouch: 2070492964
+      Mario_Big_Death: -1396547780
+      Mario_Big_Death2: 1838917275
+      Mario_Big_Idle: -2051726489
+      Mario_Big_Run1: -989407854
+      Mario_Big_Run2: -1698448767
+      Mario_Big_Run3: 456372624
+      Mario_Big_Run4: 1101041498
+      Mario_Fire_Crouch: 1736892322
+      Mario_Fire_Fire1: 1611712117
+      Mario_Fire_Fire2: 1075058506
+      Mario_Fire_Fire3: 2109939408
+      Mario_Fire_Fire4: 1080204728
+      Mario_Fire_Idle: -1214474580
+      Mario_Fire_Run1: 1425965100
+      Mario_Fire_Run2: 701642729
+      Mario_Fire_Run3: -1092809385
+      Mario_Fire_Run4: -473353996
+      Mario_Small_Death: -1657113082
+      Mario_Small_Death2: 2097142578
+      Mario_Small_Idle: 2119909162
+      Mario_Small_Jump: 881031757
+      Mario_Small_Run1: -410591566
+      Mario_Small_Run2: 1410697782
+      Mario_Small_Run3: -2020796421
       mario_full_1: -1876701386
       mario_full_100: 269767121
       mario_full_101: -1399387047
@@ -6349,11 +6025,6 @@ TextureImporter:
       mario_full_151: -134724336
       mario_full_152: 619267513
       mario_full_153: -1532220689
-      mario_full_154: -1214474580
-      mario_full_155: 1425965100
-      mario_full_156: 701642729
-      mario_full_157: -1092809385
-      mario_full_158: -473353996
       mario_full_159: -1428962310
       mario_full_16: -31578567
       mario_full_160: -246584618
@@ -6389,7 +6060,6 @@ TextureImporter:
       mario_full_188: 1398099536
       mario_full_189: 1157959506
       mario_full_19: 1822426732
-      mario_full_190: 1736892322
       mario_full_191: 458991333
       mario_full_192: -1816804791
       mario_full_193: -1910444495
@@ -6832,12 +6502,6 @@ TextureImporter:
       mario_full_63: 1268572287
       mario_full_64: -566905977
       mario_full_65: -1218676800
-      mario_full_66: -1396547780
-      mario_full_67: -2051726489
-      mario_full_68: -989407854
-      mario_full_69: -1698448767
-      mario_full_70: 456372624
-      mario_full_71: 1101041498
       mario_full_72: -72767278
       mario_full_73: 1967390842
       mario_full_74: 2014438091

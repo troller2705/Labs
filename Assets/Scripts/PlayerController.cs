@@ -19,7 +19,10 @@ public class PlayerController : MonoBehaviour
     public float jump = 8.0f;
 
     //Ground Check Vars
-    public bool isGrounded = false; // To check if the player is on the ground
+    public bool isGrounded = false;
+
+    //Power-Up Vars
+    public bool isFire = false;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if (hInput != 0) sr.flipX = (hInput < 0);
 
         //inputs for firing and jump attack
-        if (Input.GetButtonDown("Fire1") && isGrounded) anim.SetTrigger("fire");
+        if (Input.GetButtonDown("Fire1") && isGrounded && isFire) anim.SetTrigger("fire");
         if (Input.GetButtonUp("Jump") && !isGrounded) anim.SetTrigger("jumpAttack");
 
         anim.SetFloat("speed", Mathf.Abs(hInput));
