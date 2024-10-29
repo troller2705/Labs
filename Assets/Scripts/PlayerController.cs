@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         //inputs for firing and jump attack
         if (Input.GetButtonDown("Fire1") && isGrounded) anim.SetTrigger("fire");
-        if (Input.GetButtonDown("Fire1") && !isGrounded) anim.SetTrigger("jumpAttack");
+        if (Input.GetButtonUp("Jump") && !isGrounded) anim.SetTrigger("jumpAttack");
 
         anim.SetFloat("speed", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
