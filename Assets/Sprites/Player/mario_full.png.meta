@@ -1207,7 +1207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_103
+      name: MarioCrouch
       rect:
         serializedVersion: 2
         x: 426
@@ -1606,7 +1606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioAirAttack2
+      name: MarioAir1
       rect:
         serializedVersion: 2
         x: 363
@@ -1627,7 +1627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioAirAttack3
+      name: MarioAir2
       rect:
         serializedVersion: 2
         x: 393
@@ -1648,7 +1648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MarioAirAttack4
+      name: MarioAir3
       rect:
         serializedVersion: 2
         x: 424
@@ -6278,10 +6278,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      MarioAir1: -2035120687
+      MarioAir2: -863336435
+      MarioAir3: 827833366
       MarioAirAttack1: 1818002836
-      MarioAirAttack2: -2035120687
-      MarioAirAttack3: -863336435
-      MarioAirAttack4: 827833366
+      MarioCrouch: 2070492964
       MarioDeath1: -1657113082
       MarioDeath2: 2097142578
       MarioFire1: 1611712117
@@ -6298,7 +6299,6 @@ TextureImporter:
       mario_full_100: 269767121
       mario_full_101: -1399387047
       mario_full_102: -501249870
-      mario_full_103: 2070492964
       mario_full_104: 1700293112
       mario_full_105: -1031681356
       mario_full_106: -2133475919
