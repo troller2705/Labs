@@ -1312,7 +1312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_117
+      name: Mario_Big_Jump
       rect:
         serializedVersion: 2
         x: 395
@@ -2173,7 +2173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mario_full_204
+      name: Mario_Fire_Jump
       rect:
         serializedVersion: 2
         x: 395
@@ -5950,6 +5950,7 @@ TextureImporter:
       Mario_Big_Death: -1396547780
       Mario_Big_Death2: 1838917275
       Mario_Big_Idle: -2051726489
+      Mario_Big_Jump: 689683872
       Mario_Big_Run1: -989407854
       Mario_Big_Run2: -1698448767
       Mario_Big_Run3: 456372624
@@ -5960,6 +5961,7 @@ TextureImporter:
       Mario_Fire_Fire3: 2109939408
       Mario_Fire_Fire4: 1080204728
       Mario_Fire_Idle: -1214474580
+      Mario_Fire_Jump: 589048278
       Mario_Fire_Run1: 1425965100
       Mario_Fire_Run2: 701642729
       Mario_Fire_Run3: -1092809385
@@ -5988,7 +5990,6 @@ TextureImporter:
       mario_full_114: 874403376
       mario_full_115: -1384920573
       mario_full_116: -883830769
-      mario_full_117: 689683872
       mario_full_118: -1740387547
       mario_full_119: 303477713
       mario_full_12: 959108698
@@ -6075,7 +6076,6 @@ TextureImporter:
       mario_full_201: -1965585537
       mario_full_202: -762035745
       mario_full_203: -1417465692
-      mario_full_204: 589048278
       mario_full_205: -173514812
       mario_full_206: 293180528
       mario_full_207: -1088420996

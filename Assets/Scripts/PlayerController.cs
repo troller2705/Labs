@@ -17,12 +17,14 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.5f;
     [Range(3f, 10f)]
     public float jump = 8.0f;
+    public bool isCrouched = false;
 
     //Ground Check Vars
     public bool isGrounded = false;
 
     //Power-Up Vars
     public bool isFire = false;
+    public bool isBig = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +43,6 @@ public class PlayerController : MonoBehaviour
 
         float hInput = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector2 (hInput * speed, rb.velocity.y);
-
         if (curPlayingClips.Length > 0)
         {
             if (!(curPlayingClips[0].clip.name == "Fire"))
@@ -56,10 +56,20 @@ public class PlayerController : MonoBehaviour
 
         //inputs for firing and jump attack
         if (Input.GetButtonDown("Fire1") && isGrounded && isFire) anim.SetTrigger("fire");
-        if (Input.GetButtonUp("Jump") && !isGrounded) anim.SetTrigger("jumpAttack");
+        if (Input.GetKeyDown("s") && !isGrounded && isBig) anim.SetTrigger("jumpAttack");
+        if (Input.GetKeyDown("s") && isGrounded && (isBig || isFire)) isCrouched = true;
+        if (Input.GetKeyUp("s")) isCrouched = false;
+
+        if (!isCrouched)
+        {
+            rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
+        }
 
         anim.SetFloat("speed", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isCrouched", isCrouched);
+        anim.SetBool("isFire", isFire);
+        anim.SetBool("isBig", isBig);
     }
 
     void CheckIsGrounded()

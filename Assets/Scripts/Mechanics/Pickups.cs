@@ -11,12 +11,18 @@ public class Pickups : MonoBehaviour
         // Check if the colliding object is the player
         if (other.CompareTag("Player"))
         {
+            PlayerController player = other.GetComponent<PlayerController>();
             // Call a function to update score or inventory
             if (gameObject.tag == "Power-Up")
             {
                 if (gameObject.name.Contains("FireFlower"))
                 {
-                    other.GetComponent<PlayerController>().isFire = true;
+                    player.isBig = false;
+                    player.isFire = true;
+                }
+                else if (gameObject.name.Contains("PowerShroom") && !player.isFire)
+                {
+                    player.isBig = true;
                 }
             }
             if (gameObject.tag == "Coin")
