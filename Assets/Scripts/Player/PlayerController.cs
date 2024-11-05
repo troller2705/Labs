@@ -77,14 +77,6 @@ public class PlayerController : MonoBehaviour
 
         float hInput = Input.GetAxis("Horizontal");
 
-        if (curPlayingClips.Length > 0)
-        {
-            if (!(curPlayingClips[0].clip.name == "Fire"))
-            {
-                rb.velocity = new Vector2(hInput * speed, rb.velocity.y);
-            }
-        }
-
         //Sprite Flipping
         if (hInput != 0) sr.flipX = (hInput < 0);
 
