@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4401599600005056309}
   - component: {fileID: 712675820268215530}
   - component: {fileID: -632336907786535377}
-  - component: {fileID: 2292485421242935984}
+  - component: {fileID: 6968002968677942533}
   m_Layer: 0
   m_Name: PowerShroom
   m_TagString: Power-Up
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &2292485421242935984
+--- !u!114 &6968002968677942533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503217411402308101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08e5754a18210fb48a1098c802a4eed8, type: 3}
+  m_Script: {fileID: 11500000, guid: 85b823acc2ec8d144a3bc36959491530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -34,12 +34,12 @@ public class Shoot : MonoBehaviour
         if (!sr.flipX)
         {
             Projectile curProjectile = Instantiate(ProjectilePrefab, spawnR.position, spawnR.rotation);
-            curProjectile.SetVelocity(initialShotVelocity);
+            curProjectile.SetVelocity(new Vector2(initialShotVelocity.x, initialShotVelocity.y));
         }
         else
         {
             Projectile curProjectile = Instantiate(ProjectilePrefab, spawnL.position, spawnL.rotation);
-            curProjectile.SetVelocity(-initialShotVelocity);
+            curProjectile.SetVelocity(new Vector2(-initialShotVelocity.x, initialShotVelocity.y));
         }
     }
 }

@@ -6,6 +6,40 @@ using UnityEngine;
 [RequireComponent(typeof(GroundCheck))]
 public class PlayerController : MonoBehaviour
 {
+    private int _lives;
+
+    public int lives
+    {
+        get => _lives;
+        set
+        {
+            if (value > 0)
+            {
+
+            }
+            if (_lives > value)
+            {
+
+            }
+            _lives = value;
+            Debug.Log($"{_lives} lives left");
+        }
+    }
+    
+    private int _score;
+
+    public int score
+    {
+        get => _score;
+        set
+        {
+            if (value > 0) return;
+
+            _score = value;
+            Debug.Log($"Current score: {_score}");
+        }
+    }
+
     //Component Refs
     Rigidbody2D rb;
     SpriteRenderer sr;
@@ -79,5 +113,14 @@ public class PlayerController : MonoBehaviour
             if (rb.velocity.y <= 0) isGrounded = gc.IsGrounded();
         }
         else isGrounded = gc.IsGrounded();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IPickup curPickup = collision.gameObject.GetComponent<IPickup>();
+        if (curPickup != null)
+        {
+            curPickup.Pickup(gameObject);
+        }
     }
 }
