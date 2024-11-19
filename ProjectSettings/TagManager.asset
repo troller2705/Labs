@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - Power-Up
   - Wall
+  - Barrier
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -51,9 +53,9 @@ TagManager:
   - name: Level
     uniqueID: 3853027905
     locked: 0
-  - name: Foreground
-    uniqueID: 2756820187
-    locked: 0
   - name: PlayArea
     uniqueID: 664209353
+    locked: 0
+  - name: Foreground
+    uniqueID: 2756820187
     locked: 0

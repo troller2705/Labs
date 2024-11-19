@@ -6,11 +6,15 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField, Range(1, 50)] private float lifetime; 
+    [SerializeField] private int damage = 1; 
+
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, lifetime);
+
+        if (damage <= 0 ) damage = 1;
     }
 
     public void SetVelocity(Vector2 velocity)
@@ -23,6 +27,12 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

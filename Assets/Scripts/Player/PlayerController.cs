@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
-[RequireComponent(typeof(GroundCheck))]
+[RequireComponent(typeof(GroundCheck), typeof(Jump))]
 public class PlayerController : MonoBehaviour
 {
     private int _lives;
@@ -45,12 +45,14 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer sr;
     Animator anim;
     GroundCheck gc;
+    Jump jmp;
 
     //Movement Vars
     [Range(5f, 10f)]
     public float speed = 5.5f;
     [Range(3f, 10f)]
-    public float jump = 8.0f;
+    public float bounce = 10.0f;
+    public bool jumpAttack = false;
     public bool isCrouched = false;
 
     //Ground Check Vars
@@ -67,6 +69,7 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         gc = GetComponent<GroundCheck>();
+        jmp = GetComponent<Jump>();
     }
 
     // Update is called once per frame
@@ -80,9 +83,18 @@ public class PlayerController : MonoBehaviour
         //Sprite Flipping
         if (hInput != 0) sr.flipX = (hInput < 0);
 
+        if (isGrounded)
+        {
+            jumpAttack = false;
+        }
+
         //inputs for firing and jump attack
         if (Input.GetButtonDown("Fire1") && isGrounded && isFire) anim.SetTrigger("fire");
-        if (Input.GetKeyDown("s") && !isGrounded && isBig) anim.SetTrigger("jumpAttack");
+        if (Input.GetKeyDown("s") && !isGrounded && isBig)
+        {
+            anim.SetTrigger("jumpAttack");
+            jumpAttack = true;
+        }
         if (Input.GetKeyDown("s") && isGrounded && (isBig || isFire)) isCrouched = true;
         if (Input.GetKeyUp("s")) isCrouched = false;
 
@@ -113,6 +125,16 @@ public class PlayerController : MonoBehaviour
         if (curPickup != null)
         {
             curPickup.Pickup(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
         }
     }
 }
