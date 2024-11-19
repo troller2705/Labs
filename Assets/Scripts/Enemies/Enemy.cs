@@ -25,7 +25,7 @@ public abstract class Enemy : MonoBehaviour
         if (health <= 0)
         {
             anim.SetTrigger("Death");
-            if (transform.parent != null) Destroy(transform.parent.gameObject, 2);
+            if (transform.parent != null) Destroy(transform.parent.gameObject, 1);
             else Destroy(gameObject, 2);
             GetComponent<Collider2D>().enabled = false;
         }

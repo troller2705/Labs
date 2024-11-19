@@ -188,7 +188,6 @@ MonoBehaviour:
   projectileFireRate: 2
   range: 5
   player: {fileID: 0}
-  flipped: 0
 --- !u!114 &8093956337919948160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,4 +203,4 @@ MonoBehaviour:
   initialShotVelocity: {x: 0, y: 0}
   spawnR: {fileID: 6238038653535661665}
   spawnL: {fileID: 6991934186495942010}
-  ProjectilePrefab: {fileID: 1363547923826929056, guid: bfee2f0bed7664441906409684fdcf2c, type: 3}
+  ProjectilePrefab: {fileID: 1363547923826929056, guid: 3d4e7fa720d73f44289e7ba614e375fe, type: 3}
