@@ -186,6 +186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   projectileFireRate: 2
+  range: 5
+  player: {fileID: 0}
+  flipped: 0
 --- !u!114 &8093956337919948160
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class TurretEnemy : Enemy
 {
     [SerializeField] private float projectileFireRate = 2;
     private float timeSinceLastFire = 0;
-    [SerializeField] private float range = 2;
+    [SerializeField] private float range = 5;
+    [SerializeField] private Transform player;
 
     public override void Start()
     {
@@ -21,10 +22,14 @@ public class TurretEnemy : Enemy
 
         if (curPlayingClips[0].clip.name.Contains("Idle"))
         {
-            if (Time.time >= timeSinceLastFire + projectileFireRate)
+            if((gameObject.transform.position.x - player.position.x <= range) && (gameObject.transform.position.x - player.position.x >= -range))
             {
-                anim.SetTrigger("Fire");
-                timeSinceLastFire = Time.time;
+                if (Time.time >= timeSinceLastFire + projectileFireRate)
+                {
+                    anim.SetTrigger("Fire");
+                    timeSinceLastFire = Time.time;
+                }
+                Turn();
             }
         }
     }
@@ -36,6 +41,13 @@ public class TurretEnemy : Enemy
 
     private void Turn()
     {
-
+        if (gameObject.transform.position.x < player.position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
     }
 }
