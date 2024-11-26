@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour, IPickup
     public void Pickup(GameObject player)
     {
         PlayerController pc = player.GetComponent<PlayerController>();
-        pc.score++;
+        GameManager.Instance.score++;
         Destroy(gameObject);
     }
 

@@ -7,7 +7,7 @@ public class Oneup : MonoBehaviour, IPickup
     public void Pickup(GameObject player)
     {
         PlayerController pc = player.GetComponent<PlayerController>();
-        pc.lives++;
+        GameManager.Instance.lives++;
         Destroy(gameObject);
     }
 
