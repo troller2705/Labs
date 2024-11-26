@@ -98,9 +98,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
-            rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            if ((rb.velocity.y < 0) && (rb.position.y > collision.gameObject.transform.position.y))
+            {
+                collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                GameManager.Instance.lives--;
+            }
         }
     }
 }
