@@ -7,7 +7,7 @@ public class TurretEnemy : Enemy
     [SerializeField] private float projectileFireRate = 2;
     private float timeSinceLastFire = 0;
     [SerializeField] private float range = 5;
-    [SerializeField] private Transform player;
+    private Transform player = GameManager.Instance.PlayerInstance.transform;
 
     public override void Start()
     {
@@ -21,6 +21,7 @@ public class TurretEnemy : Enemy
 
     private void Update()
     {
+        if (!GameManager.Instance.PlayerInstance) return;
         AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
 
         if (curPlayingClips[0].clip.name.Contains("Idle"))

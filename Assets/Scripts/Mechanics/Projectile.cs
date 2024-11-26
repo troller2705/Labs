@@ -35,5 +35,11 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.CompareTag("Player") && gameObject.name.Contains("ProjectileE"))
+        {
+            GameManager.Instance.lives--;
+            Destroy(gameObject);
+        }
     }
 }

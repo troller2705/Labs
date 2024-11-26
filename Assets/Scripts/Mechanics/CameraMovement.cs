@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform playerTransform;
+    private Transform playerTransform = GameManager.Instance.PlayerInstance.transform;
 
     public float minXValue;
     public float maxXValue;
