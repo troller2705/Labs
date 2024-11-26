@@ -14,6 +14,9 @@ public class TurretEnemy : Enemy
         base.Start();
         if (projectileFireRate <= 0)
             projectileFireRate = 2;
+
+        if (range <= 0)
+            range = 5;
     }
 
     private void Update()
@@ -22,7 +25,7 @@ public class TurretEnemy : Enemy
 
         if (curPlayingClips[0].clip.name.Contains("Idle"))
         {
-            if((gameObject.transform.position.x - player.position.x <= range) && (gameObject.transform.position.x - player.position.x >= -range))
+            if((transform.position.x - player.position.x <= range) && (transform.position.x - player.position.x >= -range))
             {
                 if (Time.time >= timeSinceLastFire + projectileFireRate)
                 {
@@ -41,7 +44,7 @@ public class TurretEnemy : Enemy
 
     private void Turn()
     {
-        if (gameObject.transform.position.x < player.position.x)
+        if (transform.position.x < player.position.x)
         {
             sr.flipX = true;
         }
