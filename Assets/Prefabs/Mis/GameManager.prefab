@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c6802d741c1a443ab12f0573d36d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 5
+  maxLives: 2
   playerPrefab: {fileID: 1444381678538954474, guid: 6281f8212c31bbb4b82be116ab1aa672, type: 3}

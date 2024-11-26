@@ -7,7 +7,7 @@ public class TurretEnemy : Enemy
     [SerializeField] private float projectileFireRate = 2;
     private float timeSinceLastFire = 0;
     [SerializeField] private float range = 5;
-    private Transform player = GameManager.Instance.PlayerInstance.transform;
+    
 
     public override void Start()
     {
@@ -21,7 +21,9 @@ public class TurretEnemy : Enemy
 
     private void Update()
     {
-        if (!GameManager.Instance.PlayerInstance) return;
+        Transform player = GameManager.Instance.PlayerInstance.transform;
+
+        if (!player) return;
         AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
 
         if (curPlayingClips[0].clip.name.Contains("Idle"))
@@ -33,7 +35,7 @@ public class TurretEnemy : Enemy
                     anim.SetTrigger("Fire");
                     timeSinceLastFire = Time.time;
                 }
-                Turn();
+                Turn(player);
             }
         }
     }
@@ -43,7 +45,7 @@ public class TurretEnemy : Enemy
         base.TakeDamage(damageValue);
     }
 
-    private void Turn()
+    private void Turn(Transform player)
     {
         if (transform.position.x < player.position.x)
         {

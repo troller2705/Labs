@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => _instance;
 
     //GAME PROPERTIES
-    [SerializeField] private int maxLives = 5;
+    [SerializeField] private int maxLives = 3;
     private int _lives;
 
     public int lives
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (maxLives <= 0) maxLives = 5;
+        if (maxLives <= 0) maxLives = 3;
 
         lives = maxLives;
     }
@@ -81,14 +81,24 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            string sceneName = (SceneManager.GetActiveScene().name == "Level1") ? "Menu" : "Level1" ;
-            SceneManager.LoadScene(sceneName);
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Level1":
+                    SceneManager.LoadScene("Menu");
+                    break;
+                case "Menu":
+                    SceneManager.LoadScene("Level1");
+                    break;
+                case "GameOver":
+                    SceneManager.LoadScene("Menu");
+                    break;
+            }
         }
     }
 
     void GameOver()
     {
-        Debug.Log("Game Over Should Go Here");
+        SceneManager.LoadScene("GameOver");
     }
 
     void Respawn()

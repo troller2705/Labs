@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    private Transform playerTransform = GameManager.Instance.PlayerInstance.transform;
-
     public float minXValue;
     public float maxXValue;
 
@@ -13,13 +11,15 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (playerTransform == null)
-            Debug.Log("Please set player transform on camera movement");
+        //if (playerTransform == null)
+        //    Debug.Log("Please set player transform on camera movement");
     }
 
     // Update is called once per frame
     void Update()
     {
+        Transform playerTransform = GameManager.Instance.PlayerInstance.transform;
+
         if (!playerTransform) return;
 
         Vector3 pos = transform.position;
