@@ -11,6 +11,7 @@ TagManager:
   - Barrier
   - Enemy
   - ?block
+  - EnemyP
   layers:
   - Default
   - TransparentFX

@@ -50,7 +50,7 @@ public class CanvasManager : MonoBehaviour
         //Game Hud Bindings
         if (livesText)
         {
-            GameManager.Instance.OnLifeValueChanged.AddListener((value) => livesText.text = $"Lives: {value}");
+            GameManager.Instance.OnLifeValueChanged += ((value) => livesText.text = $"Lives: {value}");
             livesText.text = $"Lives: {GameManager.Instance.lives}";
         }
         

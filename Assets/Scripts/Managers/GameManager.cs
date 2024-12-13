@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
+using UnityEngine.Audio;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent<int> OnLifeValueChanged;
+    public AudioMixerGroup SFXGroup;
+    public AudioMixerGroup MusicGroup;
+
+    [HideInInspector] public Action<int> OnLifeValueChanged;
     private static GameManager _instance;
     public static GameManager Instance => _instance;
 
@@ -59,6 +63,9 @@ public class GameManager : MonoBehaviour
 
     private Transform currentCheckpoint;
 
+    [HideInInspector]
+    public MenuController currentMenuController;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -98,5 +105,13 @@ public class GameManager : MonoBehaviour
     public void UpdateCheckpoint(Transform updatedCheckpoint)
     {
         currentCheckpoint = updatedCheckpoint;
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            currentMenuController.SetActiveState(MenuController.MenuStates.Pause);
+        }
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Powershroom : MonoBehaviour, IPickup
 {
+    public AudioClip pickupSound;
+    SpriteRenderer sr;
+    AudioSource audioSource;
+
     public void Pickup(GameObject player)
     {
         PlayerController pc = player.GetComponent<PlayerController>();
@@ -11,18 +15,17 @@ public class Powershroom : MonoBehaviour, IPickup
         {
             pc.isBig = true;
         }
-        Destroy(gameObject);
+        sr.enabled = false;
+        audioSource.PlayOneShot(pickupSound);
+        Destroy(gameObject, pickupSound.length);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audioSource.outputAudioMixerGroup = GameManager.Instance.SFXGroup;
     }
 }

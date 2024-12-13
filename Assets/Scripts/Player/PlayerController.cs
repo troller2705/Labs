@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     GroundCheck gc;
     Jump jmp;
 
+    public AudioSource audioSource { get; private set; }
+
+    public AudioClip deathSound, stompSound;
+
     //Movement Vars
     [Range(5f, 10f)]
     public float speed = 5.5f;
@@ -36,13 +40,16 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         gc = GetComponent<GroundCheck>();
         jmp = GetComponent<Jump>();
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.outputAudioMixerGroup = GameManager.Instance.SFXGroup;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Prevent input when the game is paused
-        if (CanvasManager.IsGamePaused) return;
+        if (Time.timeScale <= 0) return;
 
         AnimatorClipInfo[] curPlayingClips = anim.GetCurrentAnimatorClipInfo(0);
         CheckIsGrounded();
@@ -103,14 +110,20 @@ public class PlayerController : MonoBehaviour
         {
             if ((rb.velocity.y < 0) && (rb.position.y > collision.gameObject.transform.position.y))
             {
+                audioSource.PlayOneShot(stompSound);
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
             }
             else
             {
+                audioSource.PlayOneShot(deathSound);
                 GameManager.Instance.lives--;
             }
+        }
+        if (collision.gameObject.CompareTag("EnemyP"))
+        {
+            audioSource.PlayOneShot(deathSound);
         }
     }
 }
